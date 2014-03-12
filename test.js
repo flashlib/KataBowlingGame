@@ -1,11 +1,6 @@
-var  KataBowlingGame = {
-	  score:function() {
-	 	return 300;
-	 },
-	  roll:function (){
-	 	
-	 } 
-};
+
+
+
 
 test("all strike", function(){
 	var game = KataBowlingGame;

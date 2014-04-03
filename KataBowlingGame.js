@@ -10,16 +10,16 @@ function KataBowlingGame()
 		  {
 		  	total += this.scores[i];
 		  }
-		  	
-		  
+	
 		  return total; 	  	
 	  },
 	  
 	  calculate: function(){
+	  	this.scores = new Array();
 	  	for(var i=0; i < this.balls.length; i++)
-		  {
+		  {		  
 		  	this.scores.push(this.balls[i]);
-		  }
+		  }		  
 	  },
 	  
 	  roll: function(score) {

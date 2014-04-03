@@ -22,3 +22,28 @@ test("all 0", function() {
   game.roll(0);
   ok(0 == game.score(), "all 0 should equal to 0! Current Value is: " + game.score());
 });
+
+test("all 1", function() {
+  var game = new KataBowlingGame();
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  ok(20 == game.score(), "all 1 should equal to 20! Current Value is: " + game.score());
+});

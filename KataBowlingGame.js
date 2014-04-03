@@ -16,8 +16,10 @@ function KataBowlingGame()
 	  
 	  calculate: function(){
 	  	this.scores = new Array();
+
 	  	for(var i=0; i < this.balls.length; i++)
-		  {		  
+		  {	
+
 		  	this.scores.push(this.balls[i]);
 		  }		  
 	  },
@@ -29,3 +31,13 @@ function KataBowlingGame()
 	
 	return obj;
 }
+
+function Frame(first, sec) {
+		var frame = new Array() ;
+		frame = [first, sec] ;
+		return frame ;
+}
+
+
+
+

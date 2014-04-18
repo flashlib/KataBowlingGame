@@ -76,11 +76,12 @@ function Frame(first, sec, third) {
       return (this.frame[0] + this.frame[1]) == 10;
     },
     score: function() {
-      if (this.isSpare()||this.isStrike()) {
-        return this.frame[0] + this.frame[1] + this.frame[2];
-      } else {
-        return this.frame[0] + this.frame[1];
+      var tempScore = this.frame[0] + this.frame[1];
+      if (this.isSpare() || this.isStrike()) {
+        tempScore += this.frame[2];
       }
+
+			return tempScore;
     }
   };
 

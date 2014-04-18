@@ -138,3 +138,54 @@ test("all strike", function() {
   game.roll(10);
   ok(300 == game.score(), "all strike should equal to 300! Current Value is: " + game.score());
 });
+
+test("all spare", function() {
+  var game = new KataBowlingGame();
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(6);
+  game.roll(4);
+  game.roll(5);
+  ok(151 == game.score(), "all spare should equal to 151! Current Value is: " + game.score());
+});
+
+test("mixed spike and spare", function() {
+  var game = new KataBowlingGame();
+  game.roll(5);
+  game.roll(5);
+  game.roll(10);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(6);
+  game.roll(4);
+  game.roll(5);
+  ok(161 == game.score(), "mixed spike and spare should equal to 161! Current Value is: " + game.score());
+});

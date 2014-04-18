@@ -66,9 +66,9 @@ function KataBowlingGame() {
 // return frames ;
 // }
 
-function Frame(first, sec, bonus) {
+function Frame(first, sec, third) {
   var obj = {
-    frame: [first, sec, bonus],
+    frame: [first, sec, third],
     isStrike: function() {
     	return this.frame[0]==10;
     },
@@ -76,10 +76,7 @@ function Frame(first, sec, bonus) {
       return (this.frame[0] + this.frame[1]) == 10;
     },
     score: function() {
-    	if (this.isStrike()) {
-    		return this.frame[0] + this.frame[1] + this.frame[2];
-    	}
-      if (this.isSpare()) {
+      if (this.isSpare()||this.isStrike()) {
         return this.frame[0] + this.frame[1] + this.frame[2];
       } else {
         return this.frame[0] + this.frame[1];

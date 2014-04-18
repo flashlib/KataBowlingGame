@@ -189,3 +189,29 @@ test("mixed spike and spare", function() {
   game.roll(5);
   ok(161 == game.score(), "mixed spike and spare should equal to 161! Current Value is: " + game.score());
 });
+
+test("all spare(0,10)", function() {
+  var game = new KataBowlingGame();
+  game.roll(5);
+  game.roll(5);
+  game.roll(0);
+  game.roll(10);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  game.roll(5);
+  ok(145 == game.score(), "all spare(0,10) to 145! Current Value is: " + game.score());
+});

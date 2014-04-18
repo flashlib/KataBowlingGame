@@ -16,16 +16,31 @@ function KataBowlingGame() {
     makeFrames: function() {
       this.frames = new Array();
 
-      for (var i = 0; i < 20; ) {
+      for (var i = 0, j = 0; i < 10; i++) {
+      /*
       	if(this.frames.length==10){
       		break;
       	}
-        this.frames.push(Frame(this.balls[i], this.balls[i + 1], this.balls[i + 2]));
 				if(this.balls[i]==10) {
 					i=i+1;
-				} else {
+				} 
+				else 
+				{
 					i=i+2;
 				}
+				*/
+				
+        this.frames.push(
+        	Frame(this.balls[j], 
+        	this.balls[j + 1], 
+        	this.balls[j + 2]));
+        
+				if(this.balls[j]==10) {
+ 					j = j + 1;
+      	}
+      	else {
+      		j = j + 2;
+      	}
       }
     },
 

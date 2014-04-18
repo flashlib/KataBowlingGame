@@ -95,3 +95,46 @@ test("first strike,left 1", function() {
   game.roll(1);
   ok(30 == game.score(), "first strike,left 1 should equal to 30! Current Value is: " + game.score());
 });
+
+test("last strike,left 1", function() {
+  var game = new KataBowlingGame();
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(10);
+  game.roll(1);
+  game.roll(1);
+  ok(30 == game.score(), "last strike,left 1 should equal to 30! Current Value is: " + game.score());
+});
+
+test("all strike", function() {
+  var game = new KataBowlingGame();
+  game.roll(10);
+  game.roll(10);
+  game.roll(10);
+  game.roll(10);
+  game.roll(10);
+  game.roll(10);
+  game.roll(10);
+  game.roll(10);
+  game.roll(10);
+  game.roll(10);
+  game.roll(10);
+  game.roll(10);
+  ok(300 == game.score(), "all strike should equal to 300! Current Value is: " + game.score());
+});

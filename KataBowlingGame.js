@@ -16,9 +16,16 @@ function KataBowlingGame() {
     makeFrames: function() {
       this.frames = new Array();
 
-      for (var i = 0; i < 20; i += 2) {
-      
+      for (var i = 0; i < 20; ) {
+      	if(this.frames.length==10){
+      		break;
+      	}
         this.frames.push(Frame(this.balls[i], this.balls[i + 1], this.balls[i + 2]));
+				if(this.balls[i]==10) {
+					i=i+1;
+				} else {
+					i=i+2;
+				}
       }
     },
 
@@ -47,10 +54,16 @@ function KataBowlingGame() {
 function Frame(first, sec, bonus) {
   var obj = {
     frame: [first, sec, bonus],
+    isStrike: function() {
+    	return this.frame[0]==10;
+    },
     isSpare: function() {
       return (this.frame[0] + this.frame[1]) == 10;
     },
     score: function() {
+    	if (this.isStrike()) {
+    		return this.frame[0] + this.frame[1] + this.frame[2];
+    	}
       if (this.isSpare()) {
         return this.frame[0] + this.frame[1] + this.frame[2];
       } else {

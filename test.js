@@ -72,3 +72,26 @@ test("last spare,left 1", function() {
   ok(29 == game.score(), "last spare,left 1 should equal to 29! Current Value is: " + game.score());
 });
 
+test("first strike,left 1", function() {
+  var game = new KataBowlingGame();
+  game.roll(10);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  game.roll(1);
+  ok(30 == game.score(), "first strike,left 1 should equal to 30! Current Value is: " + game.score());
+});
